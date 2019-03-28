@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GAN</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+	<div class="header">
+		<!-- <img src="{{ url_for('static', filename='logo.svg') }}" class="logo"> -->
+		Generative Adversarial Text to Image Synthesis
+	</div>
+
+	<div class="grid container">
+		<span class="col-1">Mode: </span>
+		<div class="radio col-2">
+			<input id="mode1" type="radio" name="mode-choice" value="classic" checked>
+			<label for="mode1">Classic</label>
+		</div>
+		<div class="radio col-3">
+			<input id="mode2" type="radio" name="mode-choice" value="interpolated">
+			<label for="mode2">Interpolated</label>
+		</div>
+	</div>
+
+	<div class="container">
+		<input class="input" type="text" placeholder="Write a description" id="description" />
+		<button onclick="getRandomDescription('description');" type="button">Random description</button>
+	</div>
+	<div class="container" id='description2Container' style='display: none;'>
+		<input class="input" type="text" placeholder="Write another description" id="description2" />
+		<button onclick="getRandomDescription('description2');" type="button">Random description</button>
+	</div>
+
+
+	<div class="grid container">
+
+		<span class="col-1">Type of object: </span>
+		<div class="radio col-2">
+			<input id="object1" type="radio" name="object-choice" value="flowers" checked>
+			<label for="object1">Flowers</label>
+		</div>
+		<div class="radio col-3">
+			<input id="object2" type="radio" name="object-choice" value="birds">
+			<label for="object2">Birds</label>
+		</div>
+
+		<span class="col-1">Type of model: </span>
+		<div class="radio col-2">
+			<input id="model1" type="radio" name="model-choice" value="gan" checked>
+			<label for="model1">GAN</label>
+		</div>
+		<div class="radio col-3">
+			<input id="model2" type="radio" name="model-choice" value="wgan">
+			<label for="model2">WGAN</label>
+		</div>
+
+		<span class="col-1">CLS option: </span>
+		<div class="radio col-2">
+			<input id="cls-true" type="radio" name="cls-choice" value="true" checked>
+			<label for="cls-true">Enabled</label>
+		</div>
+		<div class="radio col-3">
+			<input id="cls-false" type="radio" name="cls-choice" value="false">
+			<label for="cls-false">Disabled</label>
+		</div>
+
+	</div>
+
+	<button class="search-button" onclick="generateImage()" type="button">Generate</button>
+	<div id='result'></div>
+	<div id='description-container'>
+		<p id="resultDescription" class="resultDescription"></p>
+		<p id="resultDescription2" class="resultDescription"></p>
+	</div>
+
+
+
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

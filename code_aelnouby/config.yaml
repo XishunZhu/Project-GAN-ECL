@@ -1,0 +1,20 @@
+# Birds CUB dataset
+birds_images_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/CUB_200_2011/CUB_200_2011/images/'
+birds_embedding_path: 'C:/Users/Theo/Documents/GitHub/InferSent/encoder/embeddings'
+birds_model_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/model_birds.t7'
+birds_text_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_cub/text_c10/'
+birds_dataset_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/birds_infersent.hdf5'
+val_split_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_cub/valclasses.txt'
+train_split_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_cub/trainclasses.txt'
+test_split_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_cub/testclasses.txt'
+
+
+# flowers dataset
+flowers_images_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/102flowers/jpg/'
+flowers_embedding_path: 'C:/Users/Theo/Documents/GitHub/InferSent/encoder/embeddings_flowers'
+flowers_text_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_flowers/text_c10/'
+flowers_dataset_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/flowers_infersent.hdf5'
+flowers_model_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/model_flowers.t7'
+flowers_val_split_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_flowers/valclasses.txt'
+flowers_train_split_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_flowers/trainclasses.txt'
+flowers_test_split_path: 'C:/Users/Theo/Documents/GitHub/Text-to-Image-Synthesis/data/cvpr2016_flowers/testclasses.txt'
